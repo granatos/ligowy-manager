@@ -1,0 +1,17 @@
+
+<!doctype html>
+<html>
+<head><title>Ligi</title></head>
+<body>
+<h1>Podział Ligowy</h1>
+{% for league in leagues %}
+    <h2>{{ league }}</h2>
+    <table border="1">
+    <tr><th>Zawodnik</th></tr>
+    {% for i, row in data[league].iterrows() %}
+        <tr><td>{{ row['Zawodnik'] }}</td></tr>
+    {% endfor %}
+    </table>
+{% endfor %}
+</body>
+</html>
